@@ -12,7 +12,7 @@ distances <-
 # returns a character vector
 distances
 
-n_samples <- distances[1]
+n_samples <- as.numeric(distances[1])
 
 distances <- distances[-1]
 distances
