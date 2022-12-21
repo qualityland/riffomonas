@@ -3,7 +3,8 @@
 # read in data
 distances <-
   scan(
-    file = "data/mice_simple.braycurtis.dist",
+    #file = "data/mice_simple.braycurtis.dist",  # sample size: 10
+    file = "data/mice.braycurtis.dist",    # sample size: 348
     what = character(),
     quiet = TRUE,
     sep = "\t"
@@ -19,14 +20,17 @@ samples <- rep("", n_samples)
 
 ## DRY version with for loop
 
-# 1st element has not distance to add
+# element 1 has not distance to add
 samples[1] <- distances[1]
 distances <- distances[-1]
 
 # elements 2 to 10
 for (i in 2:n_samples) {
+  # sample names
   samples[i] <- distances[1]
   distances <- distances[-1]
+  # distances
   dist_matrix[i, 1:(i-1)] <- as.numeric(distances[1:(i-1)])
+  dist_matrix[1:(i-1), i] <- dist_matrix[i, 1:(i-1)] # optional: add transposed values
   distances <- distances[-(1:(i-1))]
 }
