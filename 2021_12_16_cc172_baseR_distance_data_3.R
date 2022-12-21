@@ -1,4 +1,4 @@
-# Code Club episode CC171
+# Code Club episode CC172
 
 # read in data
 distances <-
@@ -11,3 +11,11 @@ distances <-
 
 # returns a character vector
 distances
+
+n_samples <- distances[1]
+
+distances <- distances[-1]
+distances
+
+
+###############################################################################
