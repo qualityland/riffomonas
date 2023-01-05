@@ -22,7 +22,7 @@ c_to_f <- function(celsius, freezing = 32)
 
 c_to_f(20)
 
-# more complicated functions
+# more complicated function
 c_to_f <- function(celsius, freezing=32){
   multiplication <- 9 / 5 * celsius
   f <- multiplication + freezing

@@ -1,5 +1,3 @@
-# Code Club episode CC177 2022-01-10
-
 read_matrix <- function(file_name){
   
 
@@ -47,8 +45,3 @@ read_matrix <- function(file_name){
   # return
   return(dist_matrix)
 }
-
-read_matrix("data/mice_simple.braycurtis.dist")
-read_matrix("data/mice_simple.braycurtis_sq.dist")
-m348 <- read_matrix("data/mice.braycurtis.dist")
-str(m348)

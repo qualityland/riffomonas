@@ -1,4 +1,4 @@
-# Code Club episode CC177 2022-01-10
+# Code Club episode CC178 2022-01-13
 
 read_matrix <- function(file_name){
   
