@@ -2,13 +2,10 @@ read_matrix <- function(file_name){
   
 
   # read in data
-  file <-
-    scan(
-      file = file_name,
-      what = character(),
-      quiet = TRUE,
-      sep = "\n"
-    )
+  file <- scan(file = file_name,
+               what = character(),
+               quiet = TRUE,
+               sep = "\n")
   
   # extract number of samples from first element
   n_samples <- as.numeric(file[1])
